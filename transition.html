@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+    <title></title>
+
+    <style>
+      .button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 12px 18px;
+        background-color: #0000ff;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .sprite {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: #66ff66;
+
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+
+      .sprite.active {
+        left: 100%;
+      }
+    </style>
+
+</head>
+<body>
+
+  <div class="button">Move</div>
+  <div class="sprite"></div>
+
+
+  <script type="text/javascript" src="jquery.js"></script>
+
+  <script type="text/javascript">
+    (function ($) {
+      $('body').on('click','.button', function() {
+        $('.sprite').toggleClass('active');
+      });
+    })(jQuery);
+  </script>
+</body>
+</html>
